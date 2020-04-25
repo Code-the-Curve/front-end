@@ -8,10 +8,10 @@ const DefaultLayout = ({ children }) => {
   return (
     <Fragment>
       <NavBar />
-      <SideBar />
       <Container fluid>
         <Row noGutters={true}>
           <Col sm={12} className={'content'}>
+            <SideBar />
             {children}
           </Col>
         </Row>
