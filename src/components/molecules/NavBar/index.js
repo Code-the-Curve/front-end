@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAlignLeft } from '@fortawesome/free-solid-svg-icons';
 import {
+  Button,
   Collapse,
   Navbar,
   NavbarToggler,
@@ -11,7 +13,7 @@ import {
   DropdownItem,
 } from 'reactstrap';
 
-export default props = () => {
+const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
@@ -45,3 +47,5 @@ export default props = () => {
     </Navbar>
   );
 };
+
+export default NavBar;

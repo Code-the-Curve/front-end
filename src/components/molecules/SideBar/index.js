@@ -19,6 +19,7 @@ const SideBar = ({ toggle, isOpen }) => (
       <span color="info" onClick={toggle} style={{ color: 'blue' }}>
         &times;
       </span>
+      <h3>Mbali Health</h3>
     </div>
     <div className="side-menu">
       <Nav vertical className="list-unstyled pb-3">
