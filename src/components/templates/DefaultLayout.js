@@ -1,16 +1,18 @@
-import React, {Fragment} from 'react';
-import {Row, Container, Col} from 'reactstrap';
+import React, { Fragment } from 'react';
+import { Row, Container, Col } from 'reactstrap';
 
 import NavBar from '../molecules/NavBar/index';
+import SideBar from '../molecules/SideBar';
 
-const DefaultLayout = (props) => {
+const DefaultLayout = ({ children }) => {
   return (
     <Fragment>
-      <NavBar/>
+      <NavBar />
+      <SideBar />
       <Container fluid>
         <Row noGutters={true}>
           <Col sm={12} className={'content'}>
-            {props.children}
+            {children}
           </Col>
         </Row>
       </Container>
