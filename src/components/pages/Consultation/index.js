@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import CssBaseline from '@material-ui/core/CssBaseline';
-
+import DocumentUpload from '../../molecules/DocumentUpload/index';
 import DefaultLayout from '../../templates/DefaultLayout';
 import Messages from '../../organisms/Messages';
 import SideNav from '../../organisms/SideNav';
@@ -92,7 +92,9 @@ const Consultation = ({}) => {
     <>
       <CssBaseline />
       <DefaultLayout>
+      <DocumentUpload />
         <Layout>
+          
           <SideNav
             activeTab={tab}
             onTabChange={onTabChange}

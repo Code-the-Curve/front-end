@@ -1,7 +1,9 @@
 @import 'css/variables';
 @import 'bootstrap/scss/bootstrap';
 @import "../node_modules/emoji-mart/css/emoji-mart.css";
-
+#res {
+  width: 100%;
+}
 #emojis {
   position: absolute;
   top: -365px;

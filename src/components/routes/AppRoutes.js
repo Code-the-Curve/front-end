@@ -1,27 +1,25 @@
 import React, { lazy, Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import LoadingPage from '../pages/LoadingPage';
-
+import Consultation from '../pages/Consultation/index';
+import ConsultationComponent from '../pages/Consultation/ConsultationComponent'
 const SignInForm = lazy(() =>
   import(/* webpackChunkName: "signInForm" */ '../organisms/SIgnInForm')
 );
 const SignUpForm = lazy(() =>
   import(/* webpackChunkName: "signUpForm" */ '../organisms/SignUpForm')
 );
-const Consultation = lazy(() =>
-  import(/* webpackChunkName: "consultations" */ '../pages/Consultation')
-);
+
 const NotFoundPage = lazy(() =>
   import(/* webpackChunkName: "notFoundPage" */ '../pages/NotFoundPage')
 );
 
 const AppRoutes = () => (
   <Switch>
-    <Route path="/" exact>
-      <Suspense fallback={<LoadingPage />}>
-        <Consultation />
-      </Suspense>
-    </Route>
+    <Route path="/" exact  component={Consultation}/>
+    <Route path="/consultation" exact  component={ConsultationComponent} />
+
+    {/* </Route>
     <Route path="/sign-in" exact>
       <Suspense fallback={<LoadingPage />}>
         <SignInForm />
@@ -36,7 +34,7 @@ const AppRoutes = () => (
       <Suspense fallback={<LoadingPage />}>
         <NotFoundPage />
       </Suspense>
-    </Route>
+    </Route> */}
   </Switch>
 );
 
